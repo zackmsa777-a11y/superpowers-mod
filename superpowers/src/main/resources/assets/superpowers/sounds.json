@@ -1,0 +1,200 @@
+{
+  "charge": {
+    "subtitle": "subtitles.superpowers.charge",
+    "sounds": [
+      {
+        "name": "superpowers:charge",
+        "attenuation_distance": 24
+      }
+    ]
+  },
+  "boom": {
+    "subtitle": "subtitles.superpowers.boom",
+    "sounds": [
+      {
+        "name": "superpowers:boom",
+        "attenuation_distance": 48
+      }
+    ]
+  },
+  "impact": {
+    "subtitle": "subtitles.superpowers.impact",
+    "sounds": [
+      {
+        "name": "superpowers:impact",
+        "attenuation_distance": 24
+      }
+    ]
+  },
+  "whoosh": {
+    "subtitle": "subtitles.superpowers.whoosh",
+    "sounds": [
+      {
+        "name": "superpowers:whoosh",
+        "attenuation_distance": 24
+      }
+    ]
+  },
+  "slash": {
+    "subtitle": "subtitles.superpowers.slash",
+    "sounds": [
+      {
+        "name": "superpowers:slash",
+        "attenuation_distance": 24
+      }
+    ]
+  },
+  "beam": {
+    "subtitle": "subtitles.superpowers.beam",
+    "sounds": [
+      {
+        "name": "superpowers:beam",
+        "attenuation_distance": 24
+      }
+    ]
+  },
+  "blackhole": {
+    "subtitle": "subtitles.superpowers.blackhole",
+    "sounds": [
+      {
+        "name": "superpowers:blackhole",
+        "attenuation_distance": 48
+      }
+    ]
+  },
+  "choir": {
+    "subtitle": "subtitles.superpowers.choir",
+    "sounds": [
+      {
+        "name": "superpowers:choir",
+        "attenuation_distance": 48
+      }
+    ]
+  },
+  "demon": {
+    "subtitle": "subtitles.superpowers.demon",
+    "sounds": [
+      {
+        "name": "superpowers:demon",
+        "attenuation_distance": 48
+      }
+    ]
+  },
+  "ult": {
+    "subtitle": "subtitles.superpowers.ult",
+    "sounds": [
+      {
+        "name": "superpowers:ult",
+        "attenuation_distance": 48
+      }
+    ]
+  },
+  "teleport": {
+    "subtitle": "subtitles.superpowers.teleport",
+    "sounds": [
+      {
+        "name": "superpowers:teleport",
+        "attenuation_distance": 24
+      }
+    ]
+  },
+  "select": {
+    "subtitle": "subtitles.superpowers.select",
+    "sounds": [
+      {
+        "name": "superpowers:select",
+        "attenuation_distance": 24
+      }
+    ]
+  },
+  "holy": {
+    "subtitle": "subtitles.superpowers.holy",
+    "sounds": [
+      {
+        "name": "superpowers:holy",
+        "attenuation_distance": 24
+      }
+    ]
+  },
+  "fire": {
+    "subtitle": "subtitles.superpowers.fire",
+    "sounds": [
+      {
+        "name": "superpowers:fire",
+        "attenuation_distance": 24
+      }
+    ]
+  },
+  "thunder": {
+    "subtitle": "subtitles.superpowers.thunder",
+    "sounds": [
+      {
+        "name": "superpowers:thunder",
+        "attenuation_distance": 48
+      }
+    ]
+  },
+  "timestop": {
+    "subtitle": "subtitles.superpowers.timestop",
+    "sounds": [
+      {
+        "name": "superpowers:timestop",
+        "attenuation_distance": 24
+      }
+    ]
+  },
+  "scream": {
+    "subtitle": "subtitles.superpowers.scream",
+    "sounds": [
+      {
+        "name": "superpowers:scream",
+        "attenuation_distance": 48
+      }
+    ]
+  },
+  "whisper": {
+    "subtitle": "subtitles.superpowers.whisper",
+    "sounds": [
+      {
+        "name": "superpowers:whisper",
+        "attenuation_distance": 16
+      }
+    ]
+  },
+  "crunch": {
+    "subtitle": "subtitles.superpowers.crunch",
+    "sounds": [
+      {
+        "name": "superpowers:crunch",
+        "attenuation_distance": 24
+      }
+    ]
+  },
+  "heartbeat": {
+    "subtitle": "subtitles.superpowers.heartbeat",
+    "sounds": [
+      {
+        "name": "superpowers:heartbeat",
+        "attenuation_distance": 12
+      }
+    ]
+  },
+  "static": {
+    "subtitle": "subtitles.superpowers.static",
+    "sounds": [
+      {
+        "name": "superpowers:static",
+        "attenuation_distance": 24
+      }
+    ]
+  },
+  "drone": {
+    "subtitle": "subtitles.superpowers.drone",
+    "sounds": [
+      {
+        "name": "superpowers:drone",
+        "attenuation_distance": 48
+      }
+    ]
+  }
+}

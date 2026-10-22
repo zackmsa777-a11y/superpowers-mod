@@ -1,0 +1,18 @@
+# only the real project is published
+/*
+!/superpowers/
+!/tools/
+!/README.md
+!/LICENSE
+!/.gitignore
+!/.gitattributes
+
+/superpowers/build/
+/superpowers/run/
+/superpowers/prodrun/
+/superpowers/.gradle/
+/tools/edits/
+/tools/blender/head_*.txt
+/tools/blender/patch_c.py
+__pycache__/
+*.pyc

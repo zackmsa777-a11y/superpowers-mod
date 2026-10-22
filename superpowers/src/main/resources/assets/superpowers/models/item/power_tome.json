@@ -1,0 +1,17 @@
+{
+  "parent": "minecraft:builtin/entity",
+  "gui_light": "front",
+  "textures": {
+    "particle": "superpowers:item/power_tome"
+  },
+  "display": {
+    "gui": { "rotation": [15, -30, 0], "translation": [0, 0, 0], "scale": [0.85, 0.85, 0.85] },
+    "ground": { "rotation": [0, 0, 0], "translation": [0, 2, 0], "scale": [0.4, 0.4, 0.4] },
+    "fixed": { "rotation": [0, 0, 0], "translation": [0, 0, 0], "scale": [0.7, 0.7, 0.7] },
+    "head": { "rotation": [0, 0, 0], "translation": [0, 6, 0], "scale": [0.7, 0.7, 0.7] },
+    "thirdperson_righthand": { "rotation": [75, -45, 0], "translation": [0, 2.5, 0], "scale": [0.375, 0.375, 0.375] },
+    "thirdperson_lefthand": { "rotation": [75, 45, 0], "translation": [0, 2.5, 0], "scale": [0.375, 0.375, 0.375] },
+    "firstperson_righthand": { "rotation": [0, -25, 5], "translation": [0, 0, 0], "scale": [0.4, 0.4, 0.4] },
+    "firstperson_lefthand": { "rotation": [0, 25, -5], "translation": [0, 0, 0], "scale": [0.4, 0.4, 0.4] }
+  }
+}

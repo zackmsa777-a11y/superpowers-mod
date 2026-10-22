@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "superpowers",
+	"version": "${version}",
+	"name": "Superpowers",
+	"description": "Fire, Space, Angel, Demon, God and Entity 666 powers: M1 combos, Z/X/C abilities, cinematic V ultimates, awakening forms and flight.",
+	"authors": [
+		"zacki"
+	],
+	"license": "MIT",
+	"contact": {
+		"sources": "https://github.com/zackmsa777-a11y/superpowers-mod",
+		"issues": "https://github.com/zackmsa777-a11y/superpowers-mod/issues"
+	},
+	"icon": "assets/superpowers/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.superpowers.Superpowers"
+		],
+		"client": [
+			"com.superpowers.client.SuperpowersClient"
+		]
+	},
+	"mixins": [
+		"superpowers.mixins.json",
+		{
+			"config": "superpowers.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.0",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

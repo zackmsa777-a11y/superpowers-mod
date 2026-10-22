@@ -1,0 +1,25 @@
+{
+	"required": true,
+	"package": "com.superpowers.client.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+		"CameraMixin",
+		"ClientLevelMixin",
+		"FogRendererMixin",
+		"GameRendererMixin",
+		"GuiMixin",
+		"HumanoidModelMixin",
+		"KeyboardInputMixin",
+		"MinecraftMixin",
+		"MouseHandlerMixin",
+		"PlayerRendererMixin",
+		"LivingEntityRendererMixin",
+		"VillagerModelMixin",
+		"QuadrupedModelMixin",
+		"ItemInHandRendererInvoker",
+		"ItemInHandRendererMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
