@@ -70,8 +70,8 @@ public final class FirstPerson {
 		ps.mulPose(Axis.YP.rotationDegrees(h * 14f));
 		ps.mulPose(Axis.XP.rotationDegrees(104f + 4f * Mth.sin(time * 0.07f + h)));
 		ps.mulPose(Axis.ZP.rotationDegrees(h * 6f * Mth.sin(time * 0.05f)));
-		ps.scale(h * 0.72f, 0.72f, 0.72f);
-		TomeRenderer.emit(Mesh.get("entity_arm_l"), ps.last(), buffers, light, OverlayTexture.NO_OVERLAY);
+		ps.scale(0.72f, 0.72f, 0.72f);
+		com.superpowers.client.fx.Creature.renderFirstPersonArm(ps, buffers, light, OverlayTexture.NO_OVERLAY, h > 0 ? 0 : 1);
 		ps.popPose();
 		return true;
 	}

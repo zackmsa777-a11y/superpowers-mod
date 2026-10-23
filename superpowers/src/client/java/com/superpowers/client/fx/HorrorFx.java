@@ -107,7 +107,7 @@ public final class HorrorFx {
 		}
 
 		Vec3 mouthGuess() {
-			return base.add(fwd.scale(0.8)).add(0, 2.95, 0);
+			return base.add(fwd.scale(0.62)).add(0, 2.45, 0);
 		}
 
 		@Override
@@ -502,7 +502,7 @@ public final class HorrorFx {
 		float bodyYaw = Mth.rotLerp(pt, p.yBodyRotO, p.yBodyRot);
 		float headYaw = Mth.rotLerp(pt, p.yHeadRotO, p.yHeadRot);
 		ps.headYaw += Mth.wrapDegrees(headYaw - bodyYaw) * Mth.DEG_TO_RAD;
-		ps.headPitch = -ps.hunch + 0.25f + p.getViewXRot(pt) * Mth.DEG_TO_RAD * 0.8f;
+		ps.headPitch = p.getViewXRot(pt) * Mth.DEG_TO_RAD * 0.6f;
 		ClientState.Anim a = ClientState.anim(p.getId());
 		if (a != null) {
 			float k = Mth.clamp((ClientState.ticks + pt - a.start()) / a.duration(), 0, 1);
@@ -688,7 +688,7 @@ public final class HorrorFx {
 		g.fill(0, 0, w, h, ScreenFx.argb(0x000000, 0.92f * a));
 		float jit = 6 * Mth.sin(t * 9f);
 		float scale = h * (1.05f + 0.3f * Math.min(1f, t / 3f));
-		float jaw = Math.min(1.1f, t * 0.3f);
+		float jaw = 0.1f + Math.min(1.5f, t * 0.45f);
 		Emblem.renderFace(g, w / 2f + jit, h * 0.36f + jit * 0.5f, scale, jaw, t * 0.2f, a);
 	}
 

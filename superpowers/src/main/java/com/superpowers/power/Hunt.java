@@ -248,7 +248,7 @@ public final class Hunt {
 		float yaw = (float) (Mth.atan2(-face.x, face.z) * Mth.RAD_TO_DEG);
 		if (form) p.teleportTo(l, base.x, base.y, base.z, yaw, 20f);
 
-		Vec3 mouth = base.add(face.scale(0.8)).add(0, 2.95, 0);
+		Vec3 mouth = base.add(face.scale(0.62)).add(0, 2.45, 0);
 		Vec3 hold = mouth.add(face.scale(0.3)).subtract(0, victim.getEyeHeight(), 0);
 		Vec3 start = victim.position();
 

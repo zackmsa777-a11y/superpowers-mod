@@ -73,12 +73,6 @@ public final class Emblem {
 				}
 				if (!small) out.add(new Part(Mesh.get("god_disc"), new Matrix4f().rotateY(spin * 0.5f).scale(0.55f), 0, 0));
 			}
-			case ENTITY -> {
-				Matrix4f head = new Matrix4f().rotateY((float) Math.sin(time * 0.03f) * 0.6f).scale(small ? 3.0f : 3.3f).translate(0, -0.26f, -0.04f);
-				out.add(new Part(Mesh.get("entity_head"), head, 0, 0));
-				float jaw = 0.2f + 0.25f * (float) Math.max(0, Math.sin(time * 0.05f));
-				out.add(new Part(Mesh.get("entity_jaw"), new Matrix4f(head).translate(0, 0.205f, 0.02f).rotateX(jaw), 0, 0));
-			}
 			default -> {}
 		}
 		return out;
@@ -87,16 +81,19 @@ public final class Emblem {
 	/** Draws the emblem centered at (cx, cy) with the given pixel scale. */
 	public static void render(GuiGraphics g, PowerType type, float cx, float cy, float scale, float time, float alpha) {
 		if (type == PowerType.NONE) return;
+		if (type == PowerType.ENTITY) {
+			// the Hollow Stalker's own textured head, slowly turning, jaw working
+			draw(g, List.of(), type.color, 0x300000, cx, cy, scale, alpha, 0f);
+			float jaw = 0.1f + 0.5f * (float) Math.max(0, Math.sin(time * 0.05f));
+			com.superpowers.client.fx.Creature.renderGuiHead(g, cx, cy + scale * 0.1f, scale * 2.7f, jaw, (float) Math.sin(time * 0.03f) * 0.6f, 0f, alpha);
+			return;
+		}
 		draw(g, parts(type, time, scale < 14), type.color, type.color2, cx, cy, scale, alpha, 0.35f + 0.08f * (float) Math.sin(time * 0.05f));
 	}
 
 	/** Entity 666's face with the jaw at {@code jaw} radians, for the jumpscare. */
 	public static void renderFace(GuiGraphics g, float cx, float cy, float scale, float jaw, float time, float alpha) {
-		Matrix4f head = new Matrix4f().rotateY(0.12f * (float) Math.sin(time * 3)).rotateZ(0.1f * (float) Math.sin(time * 5)).translate(0, -0.27f, -0.05f);
-		List<Part> p = List.of(
-				new Part(Mesh.get("entity_head"), head, 0, 0),
-				new Part(Mesh.get("entity_jaw"), new Matrix4f(head).translate(0, 0.205f, 0.02f).rotateX(jaw), 0, 0));
-		draw(g, p, 0x500000, 0x200000, cx, cy, scale, alpha, 0.05f);
+		com.superpowers.client.fx.Creature.renderGuiHead(g, cx, cy, scale, jaw, 0.12f * (float) Math.sin(time * 3), 0.1f * (float) Math.sin(time * 5), alpha);
 	}
 
 	/** The SP Book itself, slowly turning. */

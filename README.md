@@ -10,7 +10,7 @@ ultimate, and an **Awakening** form. Every 3D model was built procedurally in Bl
 | 😇 Angel | Judgment | Seraph Ascendant – six wings |
 | 😈 Demon | Pandemonium | Demon King – red wings, horns, tail |
 | ⚡ God | Let There Be Light | Absolute Divinity – flies like superman |
-| 👁 Entity 666 | The Feast | Becomes the creature itself |
+| 👁 Entity 666 | The Feast | Becomes the Hollow Stalker itself |
 
 ## Controls
 
@@ -66,9 +66,10 @@ and saves screenshots to `run/screenshots/` (`-Pautotest=entity,awaken` limits i
 superpowers/                 the Fabric mod (Gradle, split client/common source sets)
   src/main/java/...          server logic: powers, awakening, destruction, the Entity 666 hunt
   src/client/java/...        rendering: 3D models, effects, creature rig, HUD, cutscenes, mixins
-  src/client/resources/.../spm/   the exported 3D models (custom .spm format)
+  src/client/resources/.../spm/   the exported 3D models (.spm static, .sps skinned)
 tools/
   blender/                   procedural Blender scripts that build every model (+ the .blend)
+                             sp_stalker.py rigs, skins and exports Entity 666 (hollow_stalker_meshy.blend)
   make_sounds.py             synthesizes all sound effects (numpy + ffmpeg)
   make_textures.py           generates the textures
   sheets.py                  contact sheets from autotest screenshots
@@ -80,6 +81,12 @@ The `.spm` models are already in the repo, so you don't need Blender to build th
 Blender 5.x, set the working directory to `tools/blender`, run `sp_lib.py`, then the batch script you want
 (`sp_models_a.py` … `sp_models_d.py`). Models are exported to your temp folder (`sp_spm/`); copy them into
 `superpowers/src/client/resources/assets/superpowers/spm/`.
+
+### Entity 666
+
+Entity 666 is the "Hollow Stalker", a model generated with [Meshy](https://www.meshy.ai) and then rigged in
+Blender: a 20-bone skeleton with automatic skin weights (`tools/blender/sp_stalker.py`). In game it is skinned on
+the CPU every frame (`Creature.java`) with a two-bone IK for its hands, so it walks, swipes, grabs and opens its jaw.
 
 ## License
 

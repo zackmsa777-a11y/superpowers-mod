@@ -43,6 +43,7 @@ public final class FxManager {
 
 	public static void clear() {
 		HorrorFx.reset();
+		Creature.reset();
 		EFFECTS.clear();
 		PENDING.clear();
 		Debris.clear();
@@ -94,6 +95,14 @@ public final class FxManager {
 			RenderSystem.defaultBlendFunc();
 			RenderSystem.disableBlend();
 			RenderSystem.enableCull();
+		}
+		try {
+			Creature.flush();
+		} catch (Exception ex) {
+			if (!loggedError) {
+				loggedError = true;
+				Superpowers.LOGGER.error("Superpowers creature rendering failed", ex);
+			}
 		}
 		try {
 			HorrorFx.renderProps(pt);
